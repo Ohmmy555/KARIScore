@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KARIScore</string>
+    <string name="kari_nscore">KARI\nSCORE</string>
 </resources>
