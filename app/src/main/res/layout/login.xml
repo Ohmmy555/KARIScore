@@ -16,12 +16,12 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="280dp"
-        android:fontFamily="@font/kanit"
         android:text="Login"
         android:textAlignment="center"
         android:textColor="#312E5F"
         android:textSize="35sp" />
     <TextView
+        android:id="@+id/LoginText_long"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login to your account"
@@ -29,8 +29,74 @@
         android:layout_below="@+id/LoginText"
         android:textColor="#312E5F"/>
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="50dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Email"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/LoginText_long"
+        android:id="@+id/emailhint"
+        android:layout_marginTop="30dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Email_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#78909C"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Password"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/emailhint"
+        android:id="@+id/passwordhint"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Password_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColorHint="#78909C"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        style="@style/Theme.KARIScore"
+        android:layout_marginTop="10dp"
+        android:background="#312E5F"
+        android:onClick="onClickClose"
+        android:text="Log in"
+        android:textColor="#ffff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/passwordhint"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/Text_signup_do_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom='true'
+        android:layout_marginBottom="25dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:layout_toRightOf="@+id/Text_signup_do_no"
+        android:layout_alignParentBottom='true'
+        />
 
 </RelativeLayout>
