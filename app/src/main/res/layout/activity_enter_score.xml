@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F6F5"
+    tools:context=".MainActivity">
+
+
+<!--div1 search and input-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:elevation="30dp"
+        android:layout_marginLeft="21.5dp"
+        android:layout_marginRight="21.5dp"
+        android:layout_marginTop="21.5dp"
+        android:layout_marginBottom="21.5dp"
+
+        >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="15dp"
+        >
+<!--text search id-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="Search ID Student"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            android:textColor="#312E5F"
+            android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:hint=" "
+            android:paddingLeft="1dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSearch"
+                android:layout_width="247dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="56dp"
+            android:layout_height="46dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginLeft="10dp">
+
+            <ImageButton
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickSearch"
+                android:textSize="20sp"
+                android:background="#312E5F"
+                android:src="@drawable/search_icon"
+                android:bottomLeftRadius="7dp"
+                android:bottomRightRadius="7dp"
+                android:topLeftRadius="7dp"
+                android:topRightRadius="7dp"
+
+                >
+            </ImageButton>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+        <!--        text-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="5dp"
+            android:id="@+id/recyclerViewStudent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            />
+
+
+<!--        add Score-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="3dp"
+            android:text="Score"
+            android:textAlignment="textStart"
+            android:textColor="#312E5F"
+            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:hint=" 0"
+                android:paddingLeft="1dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="10dp"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addScore"
+                    android:layout_width="157dp"
+                    android:layout_height="44dp"
+                    android:inputType="text"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="1.5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                >
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="150dp"
+                    android:layout_height="44dp"
+                    android:onClick="clickAddScore"
+                    android:textSize="19sp"
+                    android:textColor="#FFFFFF"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textStyle="normal"
+                    android:background="#312E5F"
+                    android:bottomLeftRadius="25dp"
+                    android:bottomRightRadius="25dp"
+                    android:topLeftRadius="25dp"
+                    android:topRightRadius="25dp"
+                    >
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+<!--    div1    -->
+
+
+<!--div 2 see score (Rev)-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:elevation="30dp"
+        android:layout_marginLeft="21.5dp"
+        android:layout_marginRight="21.5dp"
+        android:layout_marginBottom="21.5dp"
+        >
+
+<!--        Head table-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="15dp"
+            >
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="38dp"
+                    android:text="Student Id"
+                    android:textColor="#312E5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="115dp"
+                    android:text="Name"
+                    android:textColor="#312E5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Score"
+                    android:textColor="#312E5F"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="5dp"
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+               />
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
