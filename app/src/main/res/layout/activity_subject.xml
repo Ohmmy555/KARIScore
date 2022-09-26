@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".SubjectActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/layoutSubject"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="21.5dp"
+        android:layout_marginLeft="21.5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="21.5dp"
+        android:background="@drawable/border_subject"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:elevation="5dp"
+        >
+
+        <TextView
+            android:id="@+id/SubjectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:text="Mobile Device Programming"
+            android:textColor="#FFF"
+            android:textSize="22sp"
+            />
+
+        <TextView
+            android:id="@+id/SubjectCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:text="Code : 1234"
+            android:textColor="#FFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#312E5F"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:id="@+id/SubjectYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Year: 2565"
+                android:textColor="#FFF"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/SubjectTerm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Term: 1"
+                android:textColor="#FFF"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/SubjectDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="Detail: Mobile"
+                android:textColor="#FFF"
+                android:textSize="13sp"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#312E5F"
+            android:paddingTop="15dp"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="#fff"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/SubjectClass"
+                    android:layout_width="175dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/icon_people"
+                    android:scaleType="center"
+                    android:background="@drawable/border_subject_class"
+                    />
+                <ImageButton
+                    android:id="@+id/SubjectSetting"
+                    android:layout_width="175dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/icon_settings"
+                    android:scaleType="center"
+                    android:background="@drawable/border_subject_setting"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutWorks"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layoutSubject"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="21.5dp"
+        android:layout_marginLeft="21.5dp"
+        android:layout_marginBottom="21.5dp"
+        android:layout_marginTop="10dp"
+        android:padding="18dp"
+        android:background="@drawable/border_subject_works"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Works"
+            android:textColor="#312E5F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/SubjectWorks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
