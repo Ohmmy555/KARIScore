@@ -80,7 +80,6 @@
                 android:bottomRightRadius="7dp"
                 android:topLeftRadius="7dp"
                 android:topRightRadius="7dp"
-
                 >
             </ImageButton>
 
@@ -224,14 +223,13 @@
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
+
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginTop="5dp"
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scrollbars="vertical"
-               />
-
+                android:layout_marginTop="5dp"
+                android:scrollbars="vertical" />
 
 
         </LinearLayout>
