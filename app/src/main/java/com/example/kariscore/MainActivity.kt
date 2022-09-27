@@ -3,6 +3,7 @@ package com.example.kariscore
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -37,12 +38,7 @@ class MainActivity : AppCompatActivity() {
             }, 3000)
         }
         callSubject()
-
-    }
-
-    fun checknet(){
-
-    }
+}
 
     fun callSubject(){
         subjectList.clear()
@@ -51,6 +47,7 @@ class MainActivity : AppCompatActivity() {
                     call: Call<List<Subject>>,
                     response: Response<List<Subject>>
                 ) {
+                    println("Data => "+response.body())
                     response.body()?.forEach {
                         subjectList.add(Subject(it.id,it.name,it.year,it.team))
                     }
@@ -63,7 +60,11 @@ class MainActivity : AppCompatActivity() {
                 }
             })
 }
-
-
+    fun clickFirstFragment(v:View) {
+        supportFragmentManager.beginTransaction().add(
+            R.id.frameLayout,
+            addFragment()
+        ).commit()
+    }
 }
 
