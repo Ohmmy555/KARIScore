@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_subject_works"
+    android:padding="10dp"
+    android:layout_marginRight="21.5dp"
+    android:layout_marginLeft="21.5dp"
+    android:layout_marginBottom="21.5dp"
+    android:layout_marginTop="10dp"
+    android:elevation="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/LayoutWorks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        >
+
+        <TextView
+            android:id="@+id/NameWorks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Lab01 Kotlin Programming"
+            android:textColor="#312E5F"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/DateWorks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14/08/2022"
+            android:textColor="#312E5F"
+            android:textSize="13sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="25dp"
+        android:textColor="#312E5F"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:text="0/10"
+        />
+
+
+</RelativeLayout>
