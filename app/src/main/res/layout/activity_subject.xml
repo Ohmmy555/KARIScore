@@ -8,8 +8,38 @@
     tools:context=".SubjectActivity"
     >
 
+    <RelativeLayout
+        android:id="@+id/NavSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="12dp"
+        android:background="#fff"
+        >
+
+        <TextView
+            android:id="@+id/textNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Mobile Device Programming"
+            android:textSize="20sp"
+            android:textColor="#707070"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_arrow_back"
+            android:background="@drawable/border_btn_item_works"
+            />
+
+    </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/layoutSubject"
+        android:layout_below="@+id/NavSubject"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -124,7 +154,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/layoutWorks"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/layoutSubject"
@@ -141,6 +171,7 @@
         >
 
         <TextView
+            android:id="@+id/textWorks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Works"
@@ -152,10 +183,28 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/SubjectWorks"
+            android:layout_below="@+id/textWorks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:scrollbars="vertical"
             />
 
-    </LinearLayout>
+        <ImageButton
+            android:id="@+id/btnAddWorks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_add"
+            android:elevation="3dp"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border_btn_item_works"
+            />
+
+    </RelativeLayout>
 
 </RelativeLayout>
