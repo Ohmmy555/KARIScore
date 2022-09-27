@@ -40,10 +40,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun checknet(){
-
-    }
-
     fun callSubject(){
         subjectList.clear()
         createClient.retrieveSubject().enqueue(object : Callback<List<Subject>> {
