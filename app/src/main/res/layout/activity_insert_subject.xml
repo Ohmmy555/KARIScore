@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditDeleteSubjectActivity">
+
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_width="wrap_content"
+            android:onClick="closeCreateSubject"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close"
+            android:background="@color/white"/>
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="290dp"
+            android:paddingLeft="45dp"
+            android:layout_height="wrap_content"
+            android:text="Create Subjects"
+            android:textColor="#2E2E32"
+            android:textSize="22sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="2dp"
+        android:background="@drawable/textlines"
+        />
+
+    <!--    Name edt-->
+    <TextView
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="Name subject"
+        android:textAlignment="textStart"
+        android:textColor="#312E5F"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="15dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    Year edt-->
+    <TextView
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="Year"
+        android:textAlignment="textStart"
+        android:textColor="#312E5F"
+        android:textSize="20sp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="15dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    Term edt-->
+    <TextView
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="Term"
+        android:textAlignment="textStart"
+        android:textColor="#312E5F"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="16dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtTerm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    Detail-->
+    <TextView
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:text="Detail"
+        android:textAlignment="textStart"
+        android:textColor="#312E5F"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="15dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="20sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    Participate-->
+    <androidx.cardview.widget.CardView
+        android:paddingLeft="15dp"
+        android:layout_marginLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="360dp"
+            android:layout_height="44dp"
+            android:onClick="participate"
+            android:textSize="19sp"
+            android:textColor="#FFFFFF"
+            android:text="ParticipateSubject"
+            android:textAllCaps="false"
+            android:textStyle="normal"
+            android:background="#8E8E8E"
+            android:bottomLeftRadius="25dp"
+            android:bottomRightRadius="25dp"
+            android:topLeftRadius="25dp"
+            android:topRightRadius="25dp"
+            >
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
