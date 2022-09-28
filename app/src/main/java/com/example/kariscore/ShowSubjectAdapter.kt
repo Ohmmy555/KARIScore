@@ -25,9 +25,10 @@ class ShowSubjectAdapter(val items :List<Subject>, val context: Context):
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val binding_holder = holder.binding
-        binding_holder.TitleSubject.text = items[position].name
-        binding_holder.textYear.text = items[position].year
-        binding_holder.textTeam.text = items[position].team
+            binding_holder.TitleSubject.text = items[position].name
+            binding_holder.textYear.text = items[position].year
+            binding_holder.textTeam.text = items[position].team
+
     }
 
     override fun getItemCount(): Int {

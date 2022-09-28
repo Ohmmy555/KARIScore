@@ -28,6 +28,7 @@
             android:layout_marginLeft="20dp"
             android:orientation="vertical"
             android:paddingTop="5dp"
+            android:onClick="clickFirstFragment"
             android:paddingBottom="5dp">
 
             <TextView
