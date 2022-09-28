@@ -69,6 +69,7 @@
             android:layout_height="50dp"
             android:paddingLeft="16dp"
             android:paddingRight="15dp"
+            android:hint="Edit name subject"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
@@ -78,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:textSize="20sp"/>
+                android:textSize="15sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
     <!--    Year edt-->
@@ -101,6 +102,7 @@
         android:layout_height="50dp"
         android:paddingLeft="16dp"
         android:paddingRight="15dp"
+        android:hint="Edit name year"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
@@ -110,7 +112,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:textSize="20sp"/>
+            android:textSize="15sp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--    Term edt-->
@@ -132,6 +134,7 @@
         android:layout_height="50dp"
         android:paddingLeft="15dp"
         android:paddingRight="16dp"
+        android:hint="Edit term number"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
@@ -141,7 +144,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:textSize="20sp"/>
+            android:textSize="15sp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--    Detail edt-->
@@ -163,6 +166,7 @@
         android:layout_height="50dp"
         android:paddingLeft="16dp"
         android:paddingRight="15dp"
+        android:hint="Edit detail"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
@@ -172,7 +176,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:textSize="20sp"/>
+            android:textSize="15sp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
