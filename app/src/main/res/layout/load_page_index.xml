@@ -17,6 +17,7 @@
         android:textAlignment="center"
         android:textColor="#ffff"
         android:textSize="40sp" />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
