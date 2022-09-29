@@ -127,7 +127,7 @@
         </EditText>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Logintext"
+            android:id="@+id/Signuptext"
             android:layout_width="350dp"
             android:layout_height="55dp"
             style="@style/Theme.KARIScore"
@@ -140,7 +140,7 @@
             android:layout_below="@+id/Confirm_Password"
             android:textSize="20sp"/>
         <RelativeLayout
-            android:layout_below="@id/Logintext"
+            android:layout_below="@id/Signuptext"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true">

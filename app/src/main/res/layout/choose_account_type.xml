@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#312E5F">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,7 +24,7 @@
             android:id="@+id/KariText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="25dp"
             android:layout_centerHorizontal="true"
             android:text="KARI"
             android:textAlignment="center"
@@ -46,76 +47,92 @@
             android:layout_height="wrap_content"
             android:text="Choose Account Type"
             android:layout_centerVertical="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
             android:layout_below="@+id/ScoreText"
             android:textColor="#312E5F"
             android:textSize="18sp"
             android:textStyle="italic"/>
 
-        <EditText
-            android:id="@+id/Email_signup"
-            android:layout_below="@id/LoginText_long"
-            android:layout_width="350dp"
-            android:layout_height="55dp"
-            android:layout_centerHorizontal="true"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:drawableRight="@drawable/baseline_email"
-            android:textSize="20sp"
-            android:hint="Email"
-            android:layout_marginTop="10dp"
-            android:textColorHint="#666666"
-            android:background="@drawable/border_subject_works"
-            android:elevation="2dp">
-        </EditText>
-        <EditText
-            android:id="@+id/Password"
-            android:layout_below="@id/Email_signup"
-            android:layout_width="350dp"
-            android:layout_height="55dp"
-            android:layout_centerHorizontal="true"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:paddingStart="20dp"
-            android:textSize="20sp"
-            android:hint="Password"
-            android:layout_marginTop="20dp"
-            android:textColorHint="#666666"
-            android:paddingEnd="20dp"
-            android:drawableRight="@drawable/baseline_lock"
-            android:background="@drawable/border_subject_works"
-            android:elevation="2dp">
-        </EditText>
-
-        <TextView
-            android:id="@+id/forgetpassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password?"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_below="@id/Password"
-            android:textColor="#312E5F"
-            android:textSize="18sp"/>
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Logintext"
-            android:layout_width="350dp"
-            android:layout_height="55dp"
-            style="@style/Theme.KARIScore"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/border_login"
-            android:onClick="onClickClose"
-            android:text="Sign in"
-            android:textColor="#ffff"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/forgetpassword"
-            android:textSize="20sp"/>
 
     </RelativeLayout>
+   <GridLayout
+       android:id="@+id/type"
+       android:columnCount="2"
+       android:rowCount="1"
+       android:layout_marginTop="430dp"
+       android:alignmentMode="alignMargins"
+       android:columnOrderPreserved="false"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <androidx.cardview.widget.CardView
+           android:id="@+id/teacher_select"
+           android:layout_marginLeft="40dp"
+           android:layout_width="20dp"
+           android:layout_height="200dp"
+           android:layout_columnWeight="1"
+           android:layout_rowWeight="1"
+           app:cardMaxElevation="6dp"
+           app:cardCornerRadius="12dp"
+           android:layout_margin="12dp">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:padding="16dp"
+               android:gravity="center">
+               <ImageView
+                   android:src="@drawable/teacher"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp">
+
+               </ImageView>
+               <TextView
+                   android:textSize="18sp"
+                   android:text="Teacher"
+                   android:textColor="#312E5F"
+                   android:layout_marginTop="25dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+           android:id="@+id/student_select"
+           android:layout_marginRight="40dp"
+           android:layout_width="20dp"
+           android:layout_height="200dp"
+           android:layout_columnWeight="1"
+           android:layout_rowWeight="1"
+           app:cardMaxElevation="6dp"
+           app:cardCornerRadius="12dp"
+           android:layout_margin="12dp">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:padding="16dp"
+           android:gravity="center">
+           <ImageView
+               android:src="@drawable/student"
+               android:layout_width="100dp"
+               android:layout_height="100dp">
+
+           </ImageView>
+           <TextView
+               android:textSize="18sp"
+               android:text="Student"
+               android:textColor="#312E5F"
+               android:layout_marginTop="25dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+       </LinearLayout>
+
+   </androidx.cardview.widget.CardView>
+   </GridLayout>
+
 
 
 </RelativeLayout>
