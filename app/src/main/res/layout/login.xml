@@ -4,22 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#312E5F">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="500dp">
+        <ImageView
+            android:src="@drawable/twostd"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/login" />
-
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/fram">
     <TextView
         android:id="@+id/KariText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="250dp"
         android:text="KARI"
         android:textAlignment="center"
         android:textColor="#312E5F"
         android:textSize="40sp" />
+
     <TextView
         android:id="@+id/ScoreText"
         android:layout_width="wrap_content"
@@ -40,10 +50,10 @@
         android:layout_marginLeft="30dp"
         android:layout_below="@+id/ScoreText"
         android:textColor="#312E5F"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/Email_login"
+            android:id="@+id/Email_signup"
             android:layout_below="@id/LoginText_long"
             android:layout_width="350dp"
             android:layout_height="55dp"
@@ -51,32 +61,32 @@
             android:ems="10"
             android:inputType="textEmailAddress"
             android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:drawableRight="@drawable/baseline_email"
             android:textSize="20sp"
             android:hint="Email"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:textColorHint="#666666"
             android:background="@drawable/border_subject_works"
-            tools:absoluteX="35dp"
-            tools:absoluteY="194dp"
             android:elevation="2dp">
         </EditText>
-        <EditText
-            android:id="@+id/Password"
-            android:layout_below="@id/Email_login"
-            android:layout_width="350dp"
-            android:layout_height="55dp"
-            android:layout_centerHorizontal="true"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:paddingStart="20dp"
-            android:textSize="20sp"
-            android:hint="Password"
-            android:layout_marginTop="15dp"
-            android:textColorHint="#666666"
-            android:background="@drawable/border_subject_works"
-            tools:absoluteX="35dp"
-            tools:absoluteY="194dp"
-            android:elevation="2dp">
+    <EditText
+        android:id="@+id/Password"
+        android:layout_below="@id/Email_signup"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        android:textSize="20sp"
+        android:hint="Password"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#666666"
+        android:paddingEnd="20dp"
+        android:drawableRight="@drawable/baseline_lock"
+        android:background="@drawable/border_subject_works"
+        android:elevation="2dp">
     </EditText>
 
     <TextView
@@ -85,20 +95,20 @@
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
         android:layout_below="@id/Password"
         android:textColor="#312E5F"
-        android:textSize="16sp"/>
+        android:textSize="18sp"/>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Logintext"
         android:layout_width="350dp"
         android:layout_height="55dp"
         style="@style/Theme.KARIScore"
         android:layout_marginTop="15dp"
-        android:background="#312E5F"
+        android:background="@drawable/border_login"
         android:onClick="onClickClose"
-        android:text="Log in"
+        android:text="Sign in"
         android:textColor="#ffff"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/forgetpassword"
@@ -110,27 +120,30 @@
         android:layout_centerHorizontal="true">
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="30dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp">
 
             <TextView
                 android:id="@+id/Text_signup_do_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Don't have an account?"
-                android:layout_marginBottom="25dp"
-                />
+                android:textSize="18dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
+                android:textColor="#312E5F"
                 android:text="Sign up"
                 android:layout_toRightOf="@+id/Text_signup_do_no"
-
-                />
+                android:textSize="18dp"/>
 
         </LinearLayout>
     </RelativeLayout>
+</RelativeLayout>
+
+
+
 
 
 </RelativeLayout>
