@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#312E5F">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="500dp">
+        <ImageView
+            android:src="@drawable/twostd"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/fram">
+        <TextView
+            android:id="@+id/KariText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:text="KARI"
+            android:textAlignment="center"
+            android:textColor="#312E5F"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/ScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/KariText"
+            android:layout_centerHorizontal="true"
+            android:text="SCORE"
+            android:textAlignment="center"
+            android:textColor="#312E5F"
+            android:textSize="40sp" />
+        <TextView
+            android:id="@+id/LoginText_long"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Account Type"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/ScoreText"
+            android:textColor="#312E5F"
+            android:textSize="18sp"
+            android:textStyle="italic"/>
+
+
+    </RelativeLayout>
+   <GridLayout
+       android:id="@+id/type"
+       android:columnCount="2"
+       android:rowCount="1"
+       android:layout_marginTop="430dp"
+       android:alignmentMode="alignMargins"
+       android:columnOrderPreserved="false"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <androidx.cardview.widget.CardView
+           android:id="@+id/teacher_select"
+           android:layout_marginLeft="40dp"
+           android:layout_width="20dp"
+           android:layout_height="200dp"
+           android:layout_columnWeight="1"
+           android:layout_rowWeight="1"
+           app:cardMaxElevation="6dp"
+           app:cardCornerRadius="12dp"
+           android:layout_margin="12dp">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:padding="16dp"
+               android:gravity="center">
+               <ImageView
+                   android:src="@drawable/teacher"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp">
+
+               </ImageView>
+               <TextView
+                   android:textSize="18sp"
+                   android:text="Teacher"
+                   android:textColor="#312E5F"
+                   android:layout_marginTop="25dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+           </LinearLayout>
+
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+           android:id="@+id/student_select"
+           android:layout_marginRight="40dp"
+           android:layout_width="20dp"
+           android:layout_height="200dp"
+           android:layout_columnWeight="1"
+           android:layout_rowWeight="1"
+           app:cardMaxElevation="6dp"
+           app:cardCornerRadius="12dp"
+           android:layout_margin="12dp">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:padding="16dp"
+           android:gravity="center">
+           <ImageView
+               android:src="@drawable/student"
+               android:layout_width="100dp"
+               android:layout_height="100dp">
+
+           </ImageView>
+           <TextView
+               android:textSize="18sp"
+               android:text="Student"
+               android:textColor="#312E5F"
+               android:layout_marginTop="25dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+       </LinearLayout>
+
+   </androidx.cardview.widget.CardView>
+   </GridLayout>
+
+
+
+</RelativeLayout>
