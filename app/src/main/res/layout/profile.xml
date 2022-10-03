@@ -113,7 +113,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.163"
-        android:src="" />
+        android:src="@null" />
 
     <Button
         android:id="@+id/button2"
@@ -153,7 +153,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.0"
-        android:src="" />
+        android:src="@null" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -165,7 +165,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.193"
-        android:src="" />
+        android:src="@null" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -177,7 +177,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.912"
-        android:src=""/>
+        android:src="@null"/>
 
     <ImageButton
         android:id="@+id/imageButton3"
