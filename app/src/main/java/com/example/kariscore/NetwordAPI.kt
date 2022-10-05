@@ -1,9 +1,9 @@
 package com.example.kariscore
 
-import android.app.DatePickerDialog
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.*
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
@@ -13,6 +13,9 @@ import java.time.LocalDate
 interface NetwordAPI {
     @GET("allsubject")
     fun retrieveSubject(): Call<List<Subject>>
+
+    @GET("allStudentScore")
+    fun retrieveStudentScore(): Call<List<StudentScore>>
 
     @GET("subjectWork")
     fun retrieveScore(): Call<List<Score>>
@@ -43,6 +46,25 @@ interface NetwordAPI {
         @Field("full_score") full_score:Int,
         @Field("subject_id") subject_id:Int
     ): Call<CreateWork>
+
+    @FormUrlEncoded
+    @PUT("subject/{subject_id}")
+    fun updateStudent(
+        @Field("subject_name") subject_name:String ,
+        @Field("subject_year") subject_year:Int ,
+        @Field("subject_term") subject_term:Int ,
+        @Field("subject_description") subject_description:String
+    ): Call<SubjectWork>
+
+    @DELETE("subject/{subject_id}")
+    fun deleteSubject(
+        @Path("subject_id") subject_id: String
+    ): Call<SubjectWork>
+
+    @GET("std/{user_stdid}")
+    fun retrieveStudentID(
+        @Path("user_stdid") user_stdid: String
+    ): Call<Users>
 
     companion object {
         fun create(): NetwordAPI {

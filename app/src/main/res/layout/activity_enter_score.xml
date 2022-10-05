@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F5F6F5"
-    tools:context=".MainActivity">
+    tools:context=".EnterScoreActivity">
 
 
 <!--div1 search and input-->
@@ -49,18 +49,18 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:hint=" "
             android:paddingLeft="1dp"
             app:boxCornerRadiusBottomEnd="15dp"
             app:boxCornerRadiusBottomStart="15dp"
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edtadd"
+                android:id="@+id/edtSearch"
                 android:layout_width="247dp"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:textSize="20sp" />
+                android:layout_height="44dp"
+                android:inputType="phone"
+                android:textSize="20sp"
+                android:padding="0dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.cardview.widget.CardView
@@ -86,9 +86,10 @@
         </androidx.cardview.widget.CardView>
     </LinearLayout>
         <!--        text-->
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="5dp"
-            android:id="@+id/recyclerViewStudent"
+            android:id="@+id/recyclerViewSearchStudent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical"
@@ -116,7 +117,6 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:hint=" 0"
                 android:paddingLeft="1dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="10dp"
@@ -128,8 +128,9 @@
                     android:id="@+id/addScore"
                     android:layout_width="157dp"
                     android:layout_height="44dp"
-                    android:inputType="text"
-                    android:textSize="18sp" />
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp"
+                    android:padding="0dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -225,7 +226,7 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+                android:id="@+id/recyclerViewScore"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
