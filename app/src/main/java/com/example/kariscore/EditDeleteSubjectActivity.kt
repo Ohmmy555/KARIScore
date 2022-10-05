@@ -38,9 +38,9 @@ class EditDeleteSubjectActivity : AppCompatActivity() {
             bindingEditDelete.edtYear.text.toString().toInt(),
             bindingEditDelete.edtTerm.text.toString().toInt(),
             bindingEditDelete.edtDetail.text.toString()
-        ).enqueue(object : Callback<SubjectA> {
-            override fun onResponse(call: Call<SubjectA>, response:
-            Response<SubjectA>
+        ).enqueue(object : Callback<SubjectWork> {
+            override fun onResponse(call: Call<SubjectWork>, response:
+            Response<SubjectWork>
             ) {
                 if (response.isSuccessful) {
                     Toast.makeText( applicationContext, "Seccessfully Updated",
@@ -52,7 +52,7 @@ class EditDeleteSubjectActivity : AppCompatActivity() {
                         .show()
                 }
             }
-            override fun onFailure(call: Call<SubjectA>, t: Throwable) {
+            override fun onFailure(call: Call<SubjectWork>, t: Throwable) {
                 Toast.makeText(applicationContext,"Error onFailure " +
                         t.message,
                     Toast.LENGTH_LONG).show()
@@ -67,15 +67,15 @@ class EditDeleteSubjectActivity : AppCompatActivity() {
             setNegativeButton("Yes") { dialog, which ->
                 val mID = intent.getStringExtra("mId")
                 createClient.deleteSubject(mID.toString())
-                    .enqueue(object : Callback<SubjectA> {
-                        override fun onResponse(call: Call<SubjectA>,
-                                                response: Response<SubjectA>) {
+                    .enqueue(object : Callback<SubjectWork> {
+                        override fun onResponse(call: Call<SubjectWork>,
+                                                response: Response<SubjectWork>) {
                             if (response.isSuccessful) {
                                 Toast.makeText(applicationContext,
                                     "Successfully Deleted", Toast.LENGTH_LONG).show()
                             }
                         }
-                        override fun onFailure(call: Call<SubjectA>, t:
+                        override fun onFailure(call: Call<SubjectWork>, t:
                         Throwable) {
                             Toast.makeText(applicationContext, t.message,
                                 Toast.LENGTH_LONG).show()
