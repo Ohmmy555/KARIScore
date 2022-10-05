@@ -3,7 +3,7 @@ package com.example.kariscore
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class SubjectA(
+data class SubjectWork(
     @Expose
     @SerializedName("subject_id")
     val subject_id:Int,
