@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="ID Student :"
+        android:text="ID Student : "
         android:textAlignment="textStart"
         android:textColor="#312E5F"
         android:textSize="18sp" />
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Full Name :"
+        android:text="Full Name : "
         android:textAlignment="textStart"
         android:textColor="#312E5F"
         android:textSize="18sp" />

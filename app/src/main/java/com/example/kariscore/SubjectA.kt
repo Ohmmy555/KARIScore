@@ -17,7 +17,7 @@ data class SubjectA(
     val subject_description:String,
 
     @Expose
-    @SerializedName("subject_name")
+    @SerializedName("subject_term")
     val subject_term:Int,
 
     @Expose
