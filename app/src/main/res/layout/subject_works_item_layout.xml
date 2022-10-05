@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/border_subject_item_work"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:layout_marginBottom="10dp"
+    >
 
         <LinearLayout
             android:id="@+id/LayoutWorks"
@@ -12,6 +14,8 @@
             android:orientation="vertical"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
+            android:elevation="5dp"
+            android:layout_margin="5dp"
             >
 
             <TextView
@@ -37,7 +41,7 @@
         </LinearLayout>
 
         <ImageButton
-            android:id="@+id/WorksDetail"
+            android:id="@+id/EnterScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

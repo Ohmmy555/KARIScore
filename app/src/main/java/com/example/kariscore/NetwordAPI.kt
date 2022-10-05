@@ -14,6 +14,9 @@ interface NetwordAPI {
     @GET("allsubject")
     fun retrieveSubject(): Call<List<Subject>>
 
+    @GET("subjectWork")
+    fun retrieveScore(): Call<List<Score>>
+
     @FormUrlEncoded
     @POST("insertSubject")
     fun insertSubject(
