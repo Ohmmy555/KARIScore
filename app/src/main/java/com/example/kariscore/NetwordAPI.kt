@@ -51,12 +51,12 @@ interface NetwordAPI {
         @Field("subject_year") subject_year:Int ,
         @Field("subject_term") subject_term:Int ,
         @Field("subject_description") subject_description:String
-    ): Call<SubjectA>
+    ): Call<SubjectWork>
 
     @DELETE("subject/{subject_id}")
     fun deleteSubject(
         @Path("subject_id") subject_id: String
-    ): Call<SubjectA>
+    ): Call<SubjectWork>
 
     @GET("std/{user_stdid}")
     fun retrieveStudentID(
