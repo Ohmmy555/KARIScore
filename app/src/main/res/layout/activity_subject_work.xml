@@ -182,7 +182,7 @@
             />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/SubjectWorks"
+            android:id="@+id/recyclerViewSubjectWorks"
             android:layout_below="@+id/textWorks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
