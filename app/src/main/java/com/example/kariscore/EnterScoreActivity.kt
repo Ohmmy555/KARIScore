@@ -1,5 +1,6 @@
 package com.example.kariscore
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -20,7 +21,7 @@ class EnterScoreActivity : AppCompatActivity() {
     var studentList = arrayListOf<Users>()
     val createClient = NetwordAPI.create()
 
-
+ var userid :Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEnterScoreBinding.inflate(layoutInflater)
@@ -43,16 +44,6 @@ class EnterScoreActivity : AppCompatActivity() {
         callStudentScore()
     }
 
-//    fun callSearchStudent(){
-//        binding.recyclerViewSearchStudent.addItemDecoration(
-//            DividerItemDecoration(binding.recyclerViewSearchStudent.context,
-//                DividerItemDecoration.VERTICAL) )
-//        binding.recyclerViewSearchStudent.layoutManager =
-//            LinearLayoutManager(applicationContext)
-//        binding.recyclerViewSearchStudent.adapter =
-//            defalutSearchAdapter(applicationContext)
-//
-//    }
 
     fun callStudentScore(){
         studentScoreList.clear();
@@ -83,6 +74,7 @@ class EnterScoreActivity : AppCompatActivity() {
 
 
     fun clickSearch(v: View){
+        studentList.clear()
         if(binding.edtSearch.text!!.isEmpty()){
             callStudentScore()
         }else{
@@ -92,12 +84,20 @@ class EnterScoreActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<Users>, response: Response<Users>) {
                         if(response.isSuccessful){
 
-                            studentList.add(Users(response.body()?.user_stdid.toString(),
-                                response.body()?.user_name.toString()))
-                            binding.recyclerViewSearchStudent.adapter= SearchStudentAdapter(studentList,applicationContext)
+                                studentList.add(Users(response.body()?.user_id.toString().toInt(),
+                                    response.body()?.user_stdid.toString(),
+                                    response.body()?.user_name.toString()))
+                            userid = response.body()?.user_id.toString().toInt()
+                            binding.stdId.text = response.body()?.user_stdid.toString()
+                            binding.stdFullName.text = response.body()?.user_name.toString()
+                            binding.stdId.setTextColor(Color.parseColor("#312E5F"))
+
+
                         }else{
-                            Toast.makeText(applicationContext,"Student ID Not Found",
-                                    Toast.LENGTH_LONG).show()
+                            binding.stdId.text = "Not Found!"
+                            binding.stdId.setTextColor(Color.parseColor("#FF0000"))
+                            binding.stdFullName.text = ""
+
                         }
                     }
                     override fun onFailure(call: Call<Users>, t:
@@ -105,6 +105,46 @@ class EnterScoreActivity : AppCompatActivity() {
                         Toast.makeText(applicationContext,"Error onFailure" + t.message, Toast.LENGTH_LONG).show()
                     }
                 })
+        }
+    }
+
+    fun clickAddScore(v: View) {
+        val id = userid
+        val api : NetwordAPI = Retrofit.Builder()
+            .baseUrl("https://kari-api-91by.vercel.app/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(NetwordAPI::class.java)
+        if(binding.addScore.text.toString().isNotEmpty() && id!=0){
+        api.insertScoreStudent(
+            "1".toInt(), //score ID
+            id, //user ID
+            binding.addScore.text.toString().toDouble()
+        ).enqueue(object : Callback<ScoreStudent> {
+            override fun onResponse(
+                call: Call<ScoreStudent>,
+                response: Response<ScoreStudent>
+            ) {
+                if (response.isSuccessful) {
+                    callStudentScore()
+                } else {
+                    Toast.makeText(applicationContext, "Error ", Toast.LENGTH_SHORT).show()
+                }
+                binding.addScore.text?.clear()
+                binding.stdId.text=""
+                binding.stdFullName.text=""
+                binding.edtSearch.text?.clear()
+            }
+            override fun onFailure(call: Call<ScoreStudent>, t: Throwable) {
+                Toast.makeText(applicationContext,"Error onFailure " + t.message,Toast.LENGTH_LONG).show()
+            }
+
+        })}
+        else {
+            Toast.makeText(
+                applicationContext,
+                "Please Enter Score", Toast.LENGTH_LONG
+            ).show()
         }
     }
 

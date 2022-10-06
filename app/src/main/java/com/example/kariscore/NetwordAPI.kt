@@ -39,6 +39,14 @@ interface NetwordAPI {
     ): Call<InsertOwner>
 
     @FormUrlEncoded
+    @POST("insertScoreStudent")
+    fun insertScoreStudent(
+        @Field("score_id") score_id:Int ,
+        @Field("user_id") user_id:Int ,
+        @Field("score") score:Double
+    ): Call<ScoreStudent>
+
+    @FormUrlEncoded
     @POST("createWork")
     fun createWork(
         @Field("score_name") score_name:String,
