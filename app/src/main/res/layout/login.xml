@@ -25,30 +25,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:layout_centerHorizontal="true"
-        android:text="KARI"
+        android:text="SING IN"
         android:textAlignment="center"
         android:textColor="#312E5F"
         android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/ScoreText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/KariText"
-        android:layout_centerHorizontal="true"
-        android:text="SCORE"
-        android:textAlignment="center"
-        android:textColor="#312E5F"
-        android:textSize="40sp" />
+
     <TextView
         android:id="@+id/LoginText_long"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome Back"
+        android:text="Welcome to Kari Score"
         android:layout_centerVertical="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="30dp"
-        android:layout_below="@+id/ScoreText"
+        android:layout_below="@+id/KariText"
         android:textColor="#312E5F"
         android:textSize="18sp"/>
 
@@ -65,7 +56,7 @@
             android:drawableRight="@drawable/baseline_email"
             android:textSize="20sp"
             android:hint="Email"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:textColorHint="#666666"
             android:background="@drawable/border_subject_works"
             android:elevation="2dp">
@@ -95,7 +86,7 @@
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="30dp"
         android:layout_below="@id/Password"
         android:textColor="#312E5F"
