@@ -66,9 +66,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:inputType="text"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:padding="0dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--    Year edt-->
@@ -99,9 +100,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtYear"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:textSize="15sp"/>
+            android:layout_height="44dp"
+            android:inputType="number"
+            android:textSize="15sp"
+            android:padding="0dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--    Term edt-->
@@ -131,9 +133,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtTerm"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:textSize="15sp"/>
+            android:layout_height="44dp"
+            android:inputType="number"
+            android:textSize="15sp"
+            android:padding="0dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--    Detail-->
@@ -163,9 +166,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtDetail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:inputType="text"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:padding="0dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -182,10 +186,10 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="360dp"
             android:layout_height="44dp"
-            android:onClick="participate"
+            android:onClick="insertSubject"
             android:textSize="19sp"
             android:textColor="#FFFFFF"
-            android:text="ParticipateSubject"
+            android:text="Add Subject"
             android:textAllCaps="false"
             android:textStyle="normal"
             android:background="#8E8E8E"
